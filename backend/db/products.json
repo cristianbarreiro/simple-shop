@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "name": "Classic White T-Shirt",
+        "description": "A comfortable and essential 100% cotton t-shirt.",
+        "price": 19.99,
+        "image_url": "https://placehold.co/300x200/eee/333?text=T-Shirt"
+    },
+    {
+        "id": 2,
+        "name": "Denim Jeans",
+        "description": "Durable and stylish blue denim jeans.",
+        "price": 49.99,
+        "image_url": "https://placehold.co/300x200/3e4e68/fff?text=Jeans"
+    },
+    {
+        "id": 3,
+        "name": "Sneakers",
+        "description": "Lightweight sneakers for everyday use.",
+        "price": 79.99,
+        "image_url": "https://placehold.co/300x200/d64136/fff?text=Sneakers"
+    },
+    {
+        "id": 4,
+        "name": "Winter Jacket",
+        "description": "Warm and cozy jacket for the winter season.",
+        "price": 129.99,
+        "image_url": "https://placehold.co/300x200/2c3e50/fff?text=Jacket"
+    },
+    {
+        "id": 5,
+        "name": "Sunglasses",
+        "description": "UV protection sunglasses with a modern design.",
+        "price": 24.99,
+        "image_url": "https://placehold.co/300x200/f39c12/fff?text=Sunglasses"
+    },
+    {
+        "id": 6,
+        "name": "Cap",
+        "description": "Adjustable baseball cap.",
+        "price": 14.99,
+        "image_url": "https://placehold.co/300x200/8e44ad/fff?text=Cap"
+    }
+]

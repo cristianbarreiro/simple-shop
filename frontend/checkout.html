@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Simple Shop</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">SimpleShop</a>
+        </nav>
+    </header>
+
+    <main style="max-width: 600px;">
+        <h1>Checkout</h1>
+        <div id="checkout-content">
+            <div class="cart-summary" style="text-align: left; margin-bottom: 2rem;">
+                <h3>Order Summary</h3>
+                <p>Total Items: <span id="summary-count">0</span></p>
+                <p class="total-row" style="font-size: 1.2rem;">Total to Pay: $<span id="summary-total">0.00</span></p>
+            </div>
+
+            <form id="checkout-form" class="product-card" style="padding: 2rem;">
+                <div style="margin-bottom: 1rem;">
+                    <label style="display:block; margin-bottom:0.5rem">Full Name</label>
+                    <input type="text" required
+                        style="width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px;">
+                </div>
+                <div style="margin-bottom: 1rem;">
+                    <label style="display:block; margin-bottom:0.5rem">Address</label>
+                    <input type="text" required
+                        style="width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px;">
+                </div>
+                <button type="submit" class="btn btn-block">Confirm Purchase</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="js/app.js"></script>
+    <script src="js/checkout.js"></script>
+</body>
+
+</html>
