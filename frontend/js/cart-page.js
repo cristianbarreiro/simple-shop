@@ -1,13 +1,13 @@
 const renderCart = () => {
     const cartContent = document.getElementById('cart-content');
-    const cart = getCart();
+    const cart = CartService.getCart();
 
     if (cart.length === 0) {
         cartContent.innerHTML = '<p>Your cart is empty.</p><a href="/" class="btn">Start Shopping</a>';
         return;
     }
 
-    const total = getCartTotal();
+    const total = CartService.getTotal();
 
     let html = `
         <table class="cart-table">
@@ -32,13 +32,13 @@ const renderCart = () => {
             </td>
             <td>$${item.price.toFixed(2)}</td>
             <td>
-                <button class="btn btn-secondary" onclick="changeQty(${item.id}, -1)" style="padding: 2px 8px;">-</button>
+                <button class="btn btn-secondary" onclick="window.changeQty(${item.id}, -1)" style="padding: 2px 8px;">-</button>
                 <span style="margin: 0 10px;">${item.quantity}</span>
-                <button class="btn btn-secondary" onclick="changeQty(${item.id}, 1)" style="padding: 2px 8px;">+</button>
+                <button class="btn btn-secondary" onclick="window.changeQty(${item.id}, 1)" style="padding: 2px 8px;">+</button>
             </td>
             <td>$${(item.price * item.quantity).toFixed(2)}</td>
             <td>
-                <button class="btn btn-danger" onclick="removeItem(${item.id})">Remove</button>
+                <button class="btn btn-danger" onclick="window.removeItem(${item.id})">Remove</button>
             </td>
         </tr>
     `).join('');
@@ -58,12 +58,12 @@ const renderCart = () => {
 
 // Wrappers for global access in HTML onclick attributes
 window.changeQty = (id, change) => {
-    updateQuantity(id, change);
-    renderCart(); // Re-render to show updates
+    CartService.updateQuantity(id, change);
+    renderCart();
 };
 
 window.removeItem = (id) => {
-    removeFromCart(id);
+    CartService.removeItem(id);
     renderCart();
 };
 

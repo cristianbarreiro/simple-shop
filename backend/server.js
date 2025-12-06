@@ -17,6 +17,12 @@ app.use('/api/products', productRoutes);
 
 // 404 handler removed for simplicity
 
-app.listen(PORT, () => {
-    console.log(`Server running at http://localhost:${PORT}`);
-});
+// Export app for testing
+module.exports = app;
+
+// Only start server if run directly
+if (require.main === module) {
+    app.listen(PORT, () => {
+        console.log(`Server running at http://localhost:${PORT}`);
+    });
+}
